@@ -1,0 +1,9 @@
+IP: 158.160.5.188;
+
+name_taski: dimanrid.ddns.net;
+
+name_kittygram: kotogramm.ddns.net;
+
+login: yc-user;
+
+password: NRjeSf;
