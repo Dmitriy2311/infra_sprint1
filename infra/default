@@ -1,6 +1,6 @@
 server {
 
-    server_name kotogramm.ddns.net;
+    server_name 158.160.5.188 kotogramm.ddns.net;
 
 
     location /api/ {
