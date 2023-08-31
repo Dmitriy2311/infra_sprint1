@@ -1,3 +1,5 @@
+server {
+
     server_name kotogramm.ddns.net;
 
 
