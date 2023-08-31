@@ -27,6 +27,39 @@ server {
 
 
 }
+
+server {
+
+    server_name 158.160.5.188 inoland.online;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000;
+    }
+
+    location /admin/ {
+        proxy_pass http://127.0.0.1:8000;
+    }
+
+    location /media/ {
+        alias /var/www/infra_sprint1/media/;
+    }
+
+    location / {
+    root    /var/www/infra_sprint1;
+    index   index.html index.htm;
+    try_files  $uri /index.html;
+    }
+
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/inoland.online/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/inoland.online/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
 server {
     if ($host = dimanrid.ddns.net) {
         return 301 https://$host$request_uri;
@@ -40,6 +73,7 @@ server {
 
 
 }
+
 server {
     if ($host = kotogramm.ddns.net) {
         return 301 https://$host$request_uri;
