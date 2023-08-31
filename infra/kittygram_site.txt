@@ -1,8 +1,8 @@
 IP: 158.160.5.188;
 
-name_taski: dimanrid.ddns.net;
+name_taski: https://dimanrid.ddns.net;
 
-name_kittygram: kotogramm.ddns.net;
+name_kittygram: https://kotogramm.ddns.net;
 
 login: yc-user;
 
